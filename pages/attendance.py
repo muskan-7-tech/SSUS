@@ -1,14 +1,14 @@
 import streamlit as st
 
 from database.mongodb import (
-    students_collection,
+    student_collection,
     attendance_collection
 )
 
 st.title("📅 Attendance Management")
 
 students = list(
-    students_collection.find()
+    student_collection.find()
 )
 
 if not students:
