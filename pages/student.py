@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-from database.mongodb import students_collection
+from database.mongodb import student_collection
 
 st.title("📋 Student List")
 
@@ -34,7 +34,7 @@ if search:
     }
 
 students = list(
-    students_collection.find(query)
+    student_collection.find(query)
 )
 
 if students:
